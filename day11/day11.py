@@ -7,8 +7,8 @@ file = open("input.txt").read()
 matrix = np.array([ list(map(".#".index, _)) for _ in file.splitlines() ])
 
 # List of all empty rows and columns
-R = np.where( ~matrix.any(axis=1)	)[0]
-C = np.where( ~matrix.any(axis=0)	)[0]
+R = np.where(~matrix.any(axis=1))[0]
+C = np.where(~matrix.any(axis=0))[0]
 
 # Calculations for Manhattan distance, empty Columns, empty Rows
 dM = lambda r0,c0,r1,c1: np.abs(r0-r1) + np.abs(c0-c1)
